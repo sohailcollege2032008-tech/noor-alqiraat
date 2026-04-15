@@ -107,7 +107,8 @@ async def enter_number(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     return WAIT_FOR_FILE
 
 
-MAX_FILE_SIZE = 20 * 1024 * 1024  # 20 MB — Telegram Bot API hard limit
+LOCAL_API_ACTIVE = bool(os.environ.get("LOCAL_BOT_API_URL"))
+MAX_FILE_SIZE = 2 * 1024 * 1024 * 1024 if LOCAL_API_ACTIVE else 20 * 1024 * 1024
 
 async def receive_file(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     msg = update.message
@@ -165,10 +166,19 @@ async def cancel(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
 
 # ── Telegram Application (built once, shared across requests) ─────────────────
 def _build_app() -> Application:
-    app = (Application.builder()
-           .token(config.TELEGRAM_BOT_TOKEN)
-           .updater(None)
-           .build())
+    builder = (Application.builder()
+               .token(config.TELEGRAM_BOT_TOKEN)
+               .updater(None))
+
+    # Use local Bot API server if configured — removes the 20MB file size limit
+    local_api = os.environ.get("LOCAL_BOT_API_URL", "").rstrip("/")
+    if local_api:
+        builder = (builder
+                   .base_url(f"{local_api}/bot")
+                   .base_file_url(f"{local_api}/file/bot"))
+        log.info("Using local Bot API: %s", local_api)
+
+    app = builder.build()
     conv = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
         states={
