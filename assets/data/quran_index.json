@@ -1,0 +1,572 @@
+[
+  {
+    "id": 1,
+    "name": "الفاتحة",
+    "audio_file": "001.mp3"
+  },
+  {
+    "id": 2,
+    "name": "البقرة",
+    "audio_file": "002.mp3"
+  },
+  {
+    "id": 3,
+    "name": "آل عمران",
+    "audio_file": "003.mp3"
+  },
+  {
+    "id": 4,
+    "name": "النساء",
+    "audio_file": "004.mp3"
+  },
+  {
+    "id": 5,
+    "name": "المائدة",
+    "audio_file": "005.mp3"
+  },
+  {
+    "id": 6,
+    "name": "الأنعام",
+    "audio_file": "006.mp3"
+  },
+  {
+    "id": 7,
+    "name": "الأعراف",
+    "audio_file": "007.mp3"
+  },
+  {
+    "id": 8,
+    "name": "الأنفال",
+    "audio_file": "008.mp3"
+  },
+  {
+    "id": 9,
+    "name": "التوبة",
+    "audio_file": "009.mp3"
+  },
+  {
+    "id": 10,
+    "name": "يونس",
+    "audio_file": "010.mp3"
+  },
+  {
+    "id": 11,
+    "name": "هود",
+    "audio_file": "011.mp3"
+  },
+  {
+    "id": 12,
+    "name": "يوسف",
+    "audio_file": "012.mp3"
+  },
+  {
+    "id": 13,
+    "name": "الرعد",
+    "audio_file": "013.mp3"
+  },
+  {
+    "id": 14,
+    "name": "إبراهيم",
+    "audio_file": "014.mp3"
+  },
+  {
+    "id": 15,
+    "name": "الحجر",
+    "audio_file": "015.mp3"
+  },
+  {
+    "id": 16,
+    "name": "النحل",
+    "audio_file": "016.mp3"
+  },
+  {
+    "id": 17,
+    "name": "الإسراء",
+    "audio_file": "017.mp3"
+  },
+  {
+    "id": 18,
+    "name": "الكهف",
+    "audio_file": "018.mp3"
+  },
+  {
+    "id": 19,
+    "name": "مريم",
+    "audio_file": "019.mp3"
+  },
+  {
+    "id": 20,
+    "name": "طه",
+    "audio_file": "020.mp3"
+  },
+  {
+    "id": 21,
+    "name": "الأنبياء",
+    "audio_file": "021.mp3"
+  },
+  {
+    "id": 22,
+    "name": "الحج",
+    "audio_file": "022.mp3"
+  },
+  {
+    "id": 23,
+    "name": "المؤمنون",
+    "audio_file": "023.mp3"
+  },
+  {
+    "id": 24,
+    "name": "النور",
+    "audio_file": "024.mp3"
+  },
+  {
+    "id": 25,
+    "name": "الفرقان",
+    "audio_file": "025.mp3"
+  },
+  {
+    "id": 26,
+    "name": "الشعراء",
+    "audio_file": "026.mp3"
+  },
+  {
+    "id": 27,
+    "name": "النمل",
+    "audio_file": "027.mp3"
+  },
+  {
+    "id": 28,
+    "name": "القصص",
+    "audio_file": "028.mp3"
+  },
+  {
+    "id": 29,
+    "name": "العنكبوت",
+    "audio_file": "029.mp3"
+  },
+  {
+    "id": 30,
+    "name": "الروم",
+    "audio_file": "030.mp3"
+  },
+  {
+    "id": 31,
+    "name": "لقمان",
+    "audio_file": "031.mp3"
+  },
+  {
+    "id": 32,
+    "name": "السجدة",
+    "audio_file": "032.mp3"
+  },
+  {
+    "id": 33,
+    "name": "الأحزاب",
+    "audio_file": "033.mp3"
+  },
+  {
+    "id": 34,
+    "name": "سبأ",
+    "audio_file": "034.mp3"
+  },
+  {
+    "id": 35,
+    "name": "فاطر",
+    "audio_file": "035.mp3"
+  },
+  {
+    "id": 36,
+    "name": "يس",
+    "audio_file": "036.mp3"
+  },
+  {
+    "id": 37,
+    "name": "الصافات",
+    "audio_file": "037.mp3"
+  },
+  {
+    "id": 38,
+    "name": "ص",
+    "audio_file": "038.mp3"
+  },
+  {
+    "id": 39,
+    "name": "الزمر",
+    "audio_file": "039.mp3"
+  },
+  {
+    "id": 40,
+    "name": "غافر",
+    "audio_file": "040.mp3"
+  },
+  {
+    "id": 41,
+    "name": "فصلت",
+    "audio_file": "041.mp3"
+  },
+  {
+    "id": 42,
+    "name": "الشورى",
+    "audio_file": "042.mp3"
+  },
+  {
+    "id": 43,
+    "name": "الزخرف",
+    "audio_file": "043.mp3"
+  },
+  {
+    "id": 44,
+    "name": "الدخان",
+    "audio_file": "044.mp3"
+  },
+  {
+    "id": 45,
+    "name": "الجاثية",
+    "audio_file": "045.mp3"
+  },
+  {
+    "id": 46,
+    "name": "الأحقاف",
+    "audio_file": "046.mp3"
+  },
+  {
+    "id": 47,
+    "name": "محمد",
+    "audio_file": "047.mp3"
+  },
+  {
+    "id": 48,
+    "name": "الفتح",
+    "audio_file": "048.mp3"
+  },
+  {
+    "id": 49,
+    "name": "الحجرات",
+    "audio_file": "049.mp3"
+  },
+  {
+    "id": 50,
+    "name": "ق",
+    "audio_file": "050.mp3"
+  },
+  {
+    "id": 51,
+    "name": "الذاريات",
+    "audio_file": "051.mp3"
+  },
+  {
+    "id": 52,
+    "name": "الطور",
+    "audio_file": "052.mp3"
+  },
+  {
+    "id": 53,
+    "name": "النجم",
+    "audio_file": "053.mp3"
+  },
+  {
+    "id": 54,
+    "name": "القمر",
+    "audio_file": "054.mp3"
+  },
+  {
+    "id": 55,
+    "name": "الرحمن",
+    "audio_file": "055.mp3"
+  },
+  {
+    "id": 56,
+    "name": "الواقعة",
+    "audio_file": "056.mp3"
+  },
+  {
+    "id": 57,
+    "name": "الحديد",
+    "audio_file": "057.mp3"
+  },
+  {
+    "id": 58,
+    "name": "المجادلة",
+    "audio_file": "058.mp3"
+  },
+  {
+    "id": 59,
+    "name": "الحشر",
+    "audio_file": "059.mp3"
+  },
+  {
+    "id": 60,
+    "name": "الممتحنة",
+    "audio_file": "060.mp3"
+  },
+  {
+    "id": 61,
+    "name": "الصف",
+    "audio_file": "061.mp3"
+  },
+  {
+    "id": 62,
+    "name": "الجمعة",
+    "audio_file": "062.mp3"
+  },
+  {
+    "id": 63,
+    "name": "المنافقون",
+    "audio_file": "063.mp3"
+  },
+  {
+    "id": 64,
+    "name": "التغابن",
+    "audio_file": "064.mp3"
+  },
+  {
+    "id": 65,
+    "name": "الطلاق",
+    "audio_file": "065.mp3"
+  },
+  {
+    "id": 66,
+    "name": "التحريم",
+    "audio_file": "066.mp3"
+  },
+  {
+    "id": 67,
+    "name": "الملك",
+    "audio_file": "067.mp3"
+  },
+  {
+    "id": 68,
+    "name": "القلم",
+    "audio_file": "068.mp3"
+  },
+  {
+    "id": 69,
+    "name": "الحاقة",
+    "audio_file": "069.mp3"
+  },
+  {
+    "id": 70,
+    "name": "المعارج",
+    "audio_file": "070.mp3"
+  },
+  {
+    "id": 71,
+    "name": "نوح",
+    "audio_file": "071.mp3"
+  },
+  {
+    "id": 72,
+    "name": "الجن",
+    "audio_file": "072.mp3"
+  },
+  {
+    "id": 73,
+    "name": "المزمل",
+    "audio_file": "073.mp3"
+  },
+  {
+    "id": 74,
+    "name": "المدثر",
+    "audio_file": "074.mp3"
+  },
+  {
+    "id": 75,
+    "name": "القيامة",
+    "audio_file": "075.mp3"
+  },
+  {
+    "id": 76,
+    "name": "الإنسان",
+    "audio_file": "076.mp3"
+  },
+  {
+    "id": 77,
+    "name": "المرسلات",
+    "audio_file": "077.mp3"
+  },
+  {
+    "id": 78,
+    "name": "النبأ",
+    "audio_file": "078.mp3"
+  },
+  {
+    "id": 79,
+    "name": "النازعات",
+    "audio_file": "079.mp3"
+  },
+  {
+    "id": 80,
+    "name": "عبس",
+    "audio_file": "080.mp3"
+  },
+  {
+    "id": 81,
+    "name": "التكوير",
+    "audio_file": "081.mp3"
+  },
+  {
+    "id": 82,
+    "name": "الانفطار",
+    "audio_file": "082.mp3"
+  },
+  {
+    "id": 83,
+    "name": "المطففين",
+    "audio_file": "083.mp3"
+  },
+  {
+    "id": 84,
+    "name": "الانشقاق",
+    "audio_file": "084.mp3"
+  },
+  {
+    "id": 85,
+    "name": "البروج",
+    "audio_file": "085.mp3"
+  },
+  {
+    "id": 86,
+    "name": "الطارق",
+    "audio_file": "086.mp3"
+  },
+  {
+    "id": 87,
+    "name": "الأعلى",
+    "audio_file": "087.mp3"
+  },
+  {
+    "id": 88,
+    "name": "الغاشية",
+    "audio_file": "088.mp3"
+  },
+  {
+    "id": 89,
+    "name": "الفجر",
+    "audio_file": "089.mp3"
+  },
+  {
+    "id": 90,
+    "name": "البلد",
+    "audio_file": "090.mp3"
+  },
+  {
+    "id": 91,
+    "name": "الشمس",
+    "audio_file": "091.mp3"
+  },
+  {
+    "id": 92,
+    "name": "الليل",
+    "audio_file": "092.mp3"
+  },
+  {
+    "id": 93,
+    "name": "الضحى",
+    "audio_file": "093.mp3"
+  },
+  {
+    "id": 94,
+    "name": "الشرح",
+    "audio_file": "094.mp3"
+  },
+  {
+    "id": 95,
+    "name": "التين",
+    "audio_file": "095.mp3"
+  },
+  {
+    "id": 96,
+    "name": "العلق",
+    "audio_file": "096.mp3"
+  },
+  {
+    "id": 97,
+    "name": "القدر",
+    "audio_file": "097.mp3"
+  },
+  {
+    "id": 98,
+    "name": "البينة",
+    "audio_file": "098.mp3"
+  },
+  {
+    "id": 99,
+    "name": "الزلزلة",
+    "audio_file": "099.mp3"
+  },
+  {
+    "id": 100,
+    "name": "العاديات",
+    "audio_file": "100.mp3"
+  },
+  {
+    "id": 101,
+    "name": "القارعة",
+    "audio_file": "101.mp3"
+  },
+  {
+    "id": 102,
+    "name": "التكاثر",
+    "audio_file": "102.mp3"
+  },
+  {
+    "id": 103,
+    "name": "العصر",
+    "audio_file": "103.mp3"
+  },
+  {
+    "id": 104,
+    "name": "الهمزة",
+    "audio_file": "104.mp3"
+  },
+  {
+    "id": 105,
+    "name": "الفيل",
+    "audio_file": "105.mp3"
+  },
+  {
+    "id": 106,
+    "name": "قريش",
+    "audio_file": "106.mp3"
+  },
+  {
+    "id": 107,
+    "name": "الماعون",
+    "audio_file": "107.mp3"
+  },
+  {
+    "id": 108,
+    "name": "الكوثر",
+    "audio_file": "108.mp3"
+  },
+  {
+    "id": 109,
+    "name": "الكافرون",
+    "audio_file": "109.mp3"
+  },
+  {
+    "id": 110,
+    "name": "النصر",
+    "audio_file": "110.mp3"
+  },
+  {
+    "id": 111,
+    "name": "المسد",
+    "audio_file": "111.mp3"
+  },
+  {
+    "id": 112,
+    "name": "الإخلاص",
+    "audio_file": "112.mp3"
+  },
+  {
+    "id": 113,
+    "name": "الفلق",
+    "audio_file": "113.mp3"
+  },
+  {
+    "id": 114,
+    "name": "الناس",
+    "audio_file": "114.mp3"
+  }
+]
