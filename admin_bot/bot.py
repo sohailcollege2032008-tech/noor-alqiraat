@@ -107,25 +107,52 @@ async def enter_number(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     return WAIT_FOR_FILE
 
 
+MAX_FILE_SIZE = 20 * 1024 * 1024  # 20 MB — Telegram Bot API hard limit
+
 async def receive_file(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
-    doc = update.message.document
-    if not doc or not doc.file_name.lower().endswith(".mp3"):
-        await update.message.reply_text("❌ أرسل ملف .mp3 فقط.")
+    msg = update.message
+
+    # Accept both Document and Audio message types
+    if msg.document:
+        file_obj  = msg.document
+        file_size = file_obj.file_size or 0
+    elif msg.audio:
+        file_obj  = msg.audio
+        file_size = file_obj.file_size or 0
+    else:
+        await msg.reply_text(
+            "❌ أرسل الملف كـ *ملف/Document* وليس كرسالة صوتية.\n"
+            "في Telegram: اضغط مشاركة ← ملف (File) ← اختر الـ mp3",
+            parse_mode="Markdown")
         return WAIT_FOR_FILE
+
+    # Enforce 20 MB limit
+    if file_size > MAX_FILE_SIZE:
+        size_mb = file_size / 1024 / 1024
+        await msg.reply_text(
+            f"❌ حجم الملف ({size_mb:.1f} MB) أكبر من الحد المسموح (20 MB).\n\n"
+            "يجب ضغط الملف أولاً:\n"
+            "• استخدم bitrate 64 kbps بدلاً من 128+\n"
+            "• أو قسّم السورة الطويلة لأجزاء\n\n"
+            "أرسل الملف المضغوط وحاول مرة أخرى.")
+        return WAIT_FOR_FILE
+
     remote_key = ctx.user_data["remote_key"]
-    await update.message.reply_text("⏳ جاري الرفع…")
+    await msg.reply_text(f"⏳ جاري التحميل والرفع إلى R2…")
     try:
-        tg_file = await doc.get_file()
+        tg_file = await file_obj.get_file()
         buf = io.BytesIO()
         await tg_file.download_to_memory(buf)
         buf.seek(0)
         r2.upload_bytes(buf.read(), remote_key)
-        await update.message.reply_text(
-            f"✅ تم الرفع!\n`{remote_key}`\n\nابدأ من جديد بـ /start",
+        log.info("Uploaded %s (%d bytes)", remote_key, file_size)
+        await msg.reply_text(
+            f"✅ تم الرفع بنجاح!\n`{remote_key}`\n\nابدأ من جديد بـ /start",
             parse_mode="Markdown")
     except Exception as e:
-        log.exception("Upload failed")
-        await update.message.reply_text(f"❌ فشل الرفع: {e}")
+        log.exception("Upload failed for %s", remote_key)
+        await msg.reply_text(f"❌ فشل الرفع: {e}")
+
     ctx.user_data.clear()
     return ConversationHandler.END
 
@@ -149,7 +176,7 @@ def _build_app() -> Application:
             CHOOSE_RIWAYAH:  [CallbackQueryHandler(choose_riwayah,  pattern=r"^riwayah:")],
             CHOOSE_MATN:     [CallbackQueryHandler(choose_matn,     pattern=r"^matn:")],
             ENTER_NUMBER:    [MessageHandler(filters.TEXT & ~filters.COMMAND, enter_number)],
-            WAIT_FOR_FILE:   [MessageHandler(filters.Document.ALL, receive_file)],
+            WAIT_FOR_FILE:   [MessageHandler(filters.Document.ALL | filters.AUDIO, receive_file)],
         },
         fallbacks=[CommandHandler("cancel", cancel)],
     )
